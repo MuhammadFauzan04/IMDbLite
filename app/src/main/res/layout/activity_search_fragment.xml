@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchFragment"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/containercard"
+        app:iconifiedByDefault="false"
+        android:layout_marginHorizontal="20dp"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:queryHint="Search Your Film  "
+        android:textCursorDrawable="@null"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_search"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        tools:listitem="@layout/search"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progress_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:visibility="visible"
+        app:lottie_rawRes="@raw/loadingg" />
+
+</LinearLayout>
